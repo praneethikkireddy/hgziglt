@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Talks | How Gen Z is Going to Lead Tech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0070AD',
+                            dark: '#001A3D',
+                            navy: '#0A1128',
+                            cyan: '#00A3E0',
+                            accent: '#00D2FF',
+                            cardBg: '#0F1A30'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        handwritten: ['Caveat', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #00A3E0 0%, #00D2FF 50%, #FFFFFF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-bg {
+            background: radial-gradient(circle at 80% 20%, rgba(0, 163, 224, 0.15) 0%, rgba(0, 26, 61, 0) 50%),
+                        radial-gradient(circle at 20% 80%, rgba(0, 112, 173, 0.2) 0%, rgba(10, 17, 40, 0) 50%);
+        }
+        .glass-card {
+            background: rgba(15, 26, 48, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 163, 224, 0.2);
+        }
+        .glass-card:hover {
+            border-color: rgba(0, 210, 255, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(0, 163, 224, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-brand-navy text-slate-100 font-sans min-h-screen flex flex-col justify-between selection:bg-brand-cyan selection:text-brand-dark">
+
+    <header class="sticky top-0 z-40 bg-brand-dark/80 backdrop-blur-md border-b border-brand-blue/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="flex items-center space-x-2">
+                    <svg class="w-8 h-8 text-brand-cyan" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
+                    </svg>
+                    <span class="text-2xl font-extrabold tracking-tight text-white">Tech Talks<span class="text-brand-cyan">.</span></span>
+                </div>
+                <span class="hidden md:inline-block text-xs uppercase tracking-widest text-slate-400 border-l border-slate-700 pl-3">Campus Event</span>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <button onclick="scrollToSignup()" class="bg-gradient-to-r from-brand-blue to-brand-cyan hover:from-brand-cyan hover:to-brand-accent text-white font-semibold px-5 py-2.5 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center space-x-2">
+                    <i data-lucide="ticket" class="w-4 h-4"></i>
+                    <span>Reserve Seat</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative hero-bg py-12 md:py-20 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Content -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center space-x-2 bg-brand-blue/20 border border-brand-cyan/40 px-3 py-1.5 rounded-full text-brand-accent text-sm font-medium">
+                        <span class="flex h-2 w-2 rounded-full bg-brand-accent animate-ping"></span>
+                        <span>EXCLUSIVE CAMPUS EVENT</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-6xl font-black text-white tracking-tight leading-none">
+                        How <span class="gradient-text">Gen Z</span><br>
+                        is Going to Lead Tech
+                    </h1>
+
+                    <p class="text-lg sm:text-xl text-slate-300 font-light max-w-2xl leading-relaxed">
+                        Fresh minds. New ideas. A smarter tomorrow. Discover how young builders and creators are reshaping artificial intelligence, cloud, and future technologies.
+                    </p>
+
+                    <!-- Date & Location Badges -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                        <div class="glass-card p-4 rounded-xl flex items-center space-x-4">
+                            <div class="p-3 bg-brand-blue/30 text-brand-accent rounded-lg">
+                                <i data-lucide="calendar" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400 font-medium uppercase tracking-wider">Date</p>
+                                <p class="text-base font-semibold text-white">October 10, 2026</p>
+                                <p class="text-xs text-brand-cyan">(Saturday)</p>
+                            </div>
+                        </div>
+
+                        <div class="glass-card p-4 rounded-xl flex items-center space-x-4">
+                            <div class="p-3 bg-brand-blue/30 text-brand-accent rounded-lg">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400 font-medium uppercase tracking-wider">Venue</p>
+                                <p class="text-base font-semibold text-white">Tech Campus</p>
+                                <p class="text-xs text-brand-cyan">(Tech Event Hall)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Seats Counter Banner -->
+                    <div class="glass-card p-5 rounded-2xl border border-rose-500/40 bg-gradient-to-r from-rose-950/30 to-capgemini-dark">
+                        <div class="flex items-center justify-between flex-wrap gap-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 rounded-full bg-rose-500/20 border border-rose-500 flex items-center justify-center text-rose-400">
+                                    <i data-lucide="lock" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-semibold text-white">Event Capacity Reached</h4>
+                                    <p class="text-xs text-rose-300 font-medium">All 150 seats have been reserved</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <span id="seatsRemainingCount" class="text-2xl font-black text-rose-400">0</span>
+                                <span class="text-xs text-slate-400 font-medium"> / 150 Seats Left</span>
+                                <div class="w-32 bg-slate-800 rounded-full h-2 mt-1 overflow-hidden border border-slate-700">
+                                    <div id="seatsProgressBar" class="bg-gradient-to-r from-rose-500 to-red-600 h-full" style="width: 100%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Speaker Spotlight Card -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative group w-full max-w-md">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-brand-cyan to-brand-blue rounded-3xl blur opacity-30 group-hover:opacity-75 transition duration-500"></div>
+                        <div class="relative bg-brand-dark p-6 rounded-3xl border border-slate-700/60 shadow-2xl space-y-6">
+                            
+                            <!-- Speaker Image Slot -->
+                            <div class="relative rounded-2xl overflow-hidden aspect-square border-2 border-brand-cyan/30 shadow-inner bg-slate-900 flex items-center justify-center">
+                                <div class="text-center p-6 space-y-3">
+                                    <div class="w-20 h-20 mx-auto rounded-full bg-brand-blue/30 border border-brand-cyan flex items-center justify-center text-brand-cyan">
+                                        <i data-lucide="user-check" class="w-10 h-10"></i>
+                                    </div>
+                                    <p class="text-lg font-bold text-white">Praneeth Tikkireddi</p>
+                                    <p class="text-xs text-brand-cyan uppercase tracking-wider">Keynote Speaker</p>
+                                </div>
+                            </div>
+
+                            <!-- Speaker Info -->
+                            <div class="space-y-2">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <p class="text-xs text-brand-cyan font-mono">I'm</p>
+                                        <h3 class="text-2xl font-bold text-white">Praneeth Tikkireddi</h3>
+                                    </div>
+                                    <i data-lucide="sparkles" class="text-brand-accent w-6 h-6"></i>
+                                </div>
+                                <p class="text-xs font-semibold tracking-wider text-slate-400 uppercase">
+                                    STUDENT <span class="text-brand-cyan">|</span> BUILDER <span class="text-brand-cyan">|</span> FUTURE TECH LEADER
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-brand-dark/50 relative border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">What I'll Cover</h2>
+                <p class="text-slate-400 mt-2">Key takeaways from the tech leader presentation</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="glass-card p-6 rounded-2xl space-y-4 hover:translate-y-[-4px] transition duration-300">
+                    <div class="w-12 h-12 bg-brand-blue/20 text-brand-cyan rounded-xl flex items-center justify-center border border-brand-cyan/30">
+                        <i data-lucide="lightbulb" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Why Gen Z Matters</h3>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        Our mindset, values, and digital fluency give us a unique edge in leading next-gen tech initiatives.
+                    </p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl space-y-4 hover:translate-y-[-4px] transition duration-300">
+                    <div class="w-12 h-12 bg-brand-blue/20 text-brand-cyan rounded-xl flex items-center justify-center border border-brand-cyan/30">
+                        <i data-lucide="code-2" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">The Tech Opportunities</h3>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        AI, cloud computing, and emerging technologies — and how Gen Z can actively shape what comes next.
+                    </p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl space-y-4 hover:translate-y-[-4px] transition duration-300">
+                    <div class="w-12 h-12 bg-brand-blue/20 text-brand-cyan rounded-xl flex items-center justify-center border border-brand-cyan/30">
+                        <i data-lucide="users" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Real Examples & Insights</h3>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        How young builders, creators, and problem solvers are already making a tangible global impact.
+                    </p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl space-y-4 hover:translate-y-[-4px] transition duration-300">
+                    <div class="w-12 h-12 bg-brand-blue/20 text-brand-cyan rounded-xl flex items-center justify-center border border-brand-cyan/30">
+                        <i data-lucide="rocket" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">What's Next</h3>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        The essential skills, growth mindset, and bold actions Gen Z needs to effectively lead in technology.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="mt-16 text-center">
+                <div class="inline-block p-6 rounded-2xl bg-gradient-to-r from-brand-blue/30 via-brand-cyan/20 to-brand-blue/30 border border-brand-cyan/30">
+                    <p class="font-handwritten text-3xl md:text-4xl text-brand-accent rotate-[-2deg]">
+                        "Same Dreams. Bigger Impact."
+                    </p>
+                    <span class="text-xs uppercase font-bold tracking-widest text-slate-400 mt-2 block">PULLUPPPPP #TechTalks2026</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-capgemini-navy/90 border-t border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-8 space-y-2">
+                <span class="inline-block px-3 py-1 bg-rose-500/20 border border-rose-500/40 text-rose-400 text-xs font-extrabold uppercase tracking-widest rounded-full">Fully Reserved</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Interactive 150-Seat Layout</h2>
+                <p class="text-slate-400 text-sm">All seats for this event are currently occupied.</p>
+            </div>
+
+            <!-- Stage Display -->
+            <div class="w-full max-w-md mx-auto mb-8 text-center">
+                <div class="h-8 bg-gradient-to-r from-brand-blue/40 via-brand-cyan/60 to-brand-blue/40 rounded-t-full border-t border-x border-brand-cyan/50 shadow-[0_-10px_20px_rgba(0,163,224,0.3)] flex items-center justify-center">
+                    <span class="text-[11px] font-bold uppercase tracking-widest text-white">STAGE / PRANEETH TIKKIREDDI</span>
+                </div>
+            </div>
+
+            <!-- Seat Legend -->
+            <div class="flex items-center justify-center space-x-6 mb-6 text-xs text-slate-300 flex-wrap gap-y-2">
+                <div class="flex items-center space-x-2">
+                    <span class="w-4 h-4 rounded bg-rose-950/60 border border-rose-800/80 inline-block"></span>
+                    <span class="text-rose-300 font-semibold">Reserved / Occupied (150/150)</span>
+                </div>
+            </div>
+
+            <!-- Seat Grid Container (10 Rows x 15 Seats = 150 Seats) -->
+            <div class="glass-card p-6 rounded-3xl overflow-x-auto border border-slate-700/80 opacity-90">
+                <div class="min-w-[650px] flex flex-col space-y-2 items-center" id="seatGrid">
+                    <!-- Populated dynamically via JS -->
+                </div>
+            </div>
+
+            <div id="selectedSeatNotice" class="mt-4 text-center text-sm text-rose-400 font-medium">
+                Notice: All seats are sold out. Registration is closed.
+            </div>
+        </div>
+    </section>
+
+    <section id="signup-section" class="py-16 relative">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-capgemini-dark border border-slate-700/80 rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-rose-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="text-center mb-8">
+                    <span class="text-xs font-bold uppercase tracking-widest text-rose-400 bg-rose-500/20 px-3 py-1 rounded-full border border-rose-500/30">Registration Closed</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white mt-3">Event Sold Out</h2>
+                    <p class="text-slate-400 text-sm mt-1">Thank you for your interest! Capacity of 150 attendees has been reached.</p>
+                </div>
+
+                <form id="signupForm" onsubmit="handleRegistration(event)" class="space-y-5 opacity-60 pointer-events-none">
+                    
+                    <div>
+                        <label for="fullName" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Full Name *</label>
+                        <div class="relative">
+                            <i data-lucide="user" class="w-5 h-5 absolute left-3 top-3.5 text-slate-500"></i>
+                            <input type="text" id="fullName" disabled placeholder="Registration closed" 
+                                   class="w-full bg-slate-900/80 border border-slate-700 rounded-xl pl-10 pr-4 py-3 text-slate-500 cursor-not-allowed">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Email Address *</label>
+                        <div class="relative">
+                            <i data-lucide="mail" class="w-5 h-5 absolute left-3 top-3.5 text-slate-500"></i>
+                            <input type="email" id="email" disabled placeholder="Registration closed" 
+                                   class="w-full bg-slate-900/80 border border-slate-700 rounded-xl pl-10 pr-4 py-3 text-slate-500 cursor-not-allowed">
+                        </div>
+                    </div>
+
+                    <!-- School Selection Field -->
+                    <div>
+                        <label for="schoolInput" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">School / College / Organization *</label>
+                        <div class="relative">
+                            <i data-lucide="graduation-cap" class="w-5 h-5 absolute left-3 top-3.5 text-slate-500"></i>
+                            <input type="text" id="schoolInput" disabled placeholder="Registration closed" 
+                                   class="w-full bg-slate-900/80 border border-slate-700 rounded-xl pl-10 pr-4 py-3 text-slate-500 cursor-not-allowed">
+                        </div>
+                    </div>
+
+                    <!-- Apple Developer ID Field -->
+                    <div class="p-4 bg-slate-900/90 rounded-2xl border border-slate-800 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <label for="appleId" class="block text-xs font-semibold text-slate-400 uppercase tracking-wider flex items-center space-x-2">
+                                <svg class="w-4 h-4 fill-current text-slate-500" viewBox="0 0 170 170">
+                                    <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.33.13-9.13-1.9-14.42-6.08-3.69-3.04-7.79-7.85-12.3-14.42-6.08-8.82-10.87-18.73-14.38-29.72-3.51-10.98-5.26-21.26-5.26-30.83 0-14.28 3.59-25.75 10.77-34.42 7.18-8.67 16.22-13.08 27.12-13.23 4.86 0 10.02 1.22 15.49 3.68 5.47 2.46 9.18 3.69 11.13 3.69 1.7 0 5.47-1.28 11.32-3.83 5.85-2.55 10.82-3.73 14.92-3.53 11.87.57 21.21 4.88 28.02 12.93-10.42 6.32-15.53 15.22-15.33 26.7.25 9.08 3.69 16.63 10.32 22.65 6.63 6.02 14.7 9.4 24.22 10.14-2.27 6.78-5.18 13.62-8.72 20.52zm-35.81-108.83c0 6.64-2.4 12.83-7.2 18.57-5.32 6.2-11.88 9.77-19.16 9.21-.12-.95-.19-1.9-.19-2.85 0-6.49 2.53-12.82 7.59-18.99 5.06-6.17 11.53-9.76 19.41-10.77.12.95.18 1.9.18 2.83z"/>
+                                </svg>
+                                <span>Apple Developer ID / Apple ID</span>
+                            </label>
+                        </div>
+                        <div class="relative">
+                            <i data-lucide="key" class="w-5 h-5 absolute left-3 top-3.5 text-slate-500"></i>
+                            <input type="text" id="appleId" disabled placeholder="Registration closed" 
+                                   class="w-full bg-slate-950/80 border border-slate-700 rounded-xl pl-10 pr-4 py-3 text-slate-500 cursor-not-allowed">
+                        </div>
+                    </div>
+
+                    <button type="button" disabled class="w-full bg-slate-800 text-slate-500 cursor-not-allowed font-bold py-4 rounded-xl border border-slate-700 flex items-center justify-center space-x-2 text-base">
+                        <i data-lucide="lock" class="w-5 h-5"></i>
+                        <span>Registration Closed — 150/150 Seats Reserved</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div id="confirmationModal" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-brand-dark border border-brand-cyan/40 rounded-3xl max-w-md w-full p-6 text-center space-y-6 shadow-2xl relative">
+            <div class="w-16 h-16 bg-brand-cyan/20 border border-brand-cyan text-brand-accent rounded-full flex items-center justify-center mx-auto">
+                <i data-lucide="ticket" class="w-8 h-8"></i>
+            </div>
+            
+            <div class="space-y-2">
+                <h3 class="text-2xl font-bold text-white">Registration Confirmed!</h3>
+                <p class="text-sm text-slate-300">You are registered for <span class="text-brand-cyan font-semibold">How Gen Z is Going to Lead Tech</span>.</p>
+            </div>
+
+            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800 text-left space-y-2 text-xs">
+                <div class="flex justify-between border-b border-slate-800 pb-2">
+                    <span class="text-slate-400">Attendee:</span>
+                    <span id="modalName" class="text-white font-medium">---</span>
+                </div>
+                <div class="flex justify-between border-b border-slate-800 pb-2">
+                    <span class="text-slate-400">School/Organization:</span>
+                    <span id="modalSchool" class="text-brand-accent font-medium">---</span>
+                </div>
+                <div class="flex justify-between border-b border-slate-800 pb-2">
+                    <span class="text-slate-400">Apple Dev ID:</span>
+                    <span id="modalAppleId" class="text-brand-cyan font-mono">---</span>
+                </div>
+                <div class="flex justify-between border-b border-slate-800 pb-2">
+                    <span class="text-slate-400">Seat Number:</span>
+                    <span id="modalSeat" class="text-white font-bold font-mono">---</span>
+                </div>
+                <div class="flex justify-between border-b border-slate-800 pb-2">
+                    <span class="text-slate-400">Date:</span>
+                    <span class="text-white">October 10, 2026 (Saturday)</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-slate-400">Venue:</span>
+                    <span class="text-white">Tech Campus, Tech Event Hall</span>
+                </div>
+            </div>
+
+            <button onclick="closeModal()" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3 rounded-xl transition">
+                Close & Save Pass
+            </button>
+        </div>
+    </div>
+
+    <footer class="bg-brand-dark border-t border-slate-800 py-8 text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-4 space-y-3">
+            <p>© 2026 Tech Talks. All rights reserved.</p>
+            <p class="text-slate-600">Event hosted at Tech Campus (Tech Event Hall).</p>
+        </div>
+    </footer>
+
+    <script>
+        const TOTAL_SEATS = 150;
+        const ROWS = 10;
+        const SEATS_PER_ROW = 15;
+        
+        let selectedSeatId = null;
+        let seatsRemaining = 0;
+
+        // All 150 seats marked as taken/reserved
+        const takenSeatIds = new Set();
+        for (let r = 0; r < ROWS; r++) {
+            const rowLetter = String.fromCharCode(65 + r);
+            for (let s = 1; s <= SEATS_PER_ROW; s++) {
+                takenSeatIds.add(`${rowLetter}${s}`);
+            }
+        }
+
+        function renderSeatGrid() {
+            const gridContainer = document.getElementById('seatGrid');
+            gridContainer.innerHTML = '';
+
+            for (let r = 0; r < ROWS; r++) {
+                const rowLetter = String.fromCharCode(65 + r);
+                const rowDiv = document.createElement('div');
+                rowDiv.className = 'flex items-center space-x-1.5 sm:space-x-2';
+
+                const label = document.createElement('span');
+                label.className = 'w-6 text-xs text-slate-500 font-bold font-mono text-center';
+                label.textContent = rowLetter;
+                rowDiv.appendChild(label);
+
+                for (let s = 1; s <= SEATS_PER_ROW; s++) {
+                    const seatId = `${rowLetter}${s}`;
+
+                    const btn = document.createElement('button');
+                    btn.type = 'button';
+                    btn.setAttribute('data-seat-id', seatId);
+                    btn.disabled = true;
+
+                    let baseClasses = 'w-6 h-6 sm:w-7 sm:h-7 rounded text-[10px] font-mono flex items-center justify-center transition-all duration-200 ';
+                    btn.className = baseClasses + 'bg-rose-950/40 border border-rose-900/60 text-rose-500/70 cursor-not-allowed';
+
+                    btn.textContent = s;
+
+                    rowDiv.appendChild(btn);
+                }
+
+                gridContainer.appendChild(rowDiv);
+            }
+            updateSeatsDisplay();
+        }
+
+        function selectSeat(seatId) {
+            // Disabled since sold out
+        }
+
+        function updateSeatsDisplay() {
+            document.getElementById('seatsRemainingCount').textContent = seatsRemaining;
+            document.getElementById('seatsProgressBar').style.width = '100%';
+        }
+
+        lucide.createIcons();
+        renderSeatGrid();
+
+        function scrollToSignup() {
+            document.getElementById('signup-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function handleRegistration(e) {
+            e.preventDefault();
+
+            if (!selectedSeatId) {
+                alert('Please select a seat from the interactive layout before submitting.');
+                document.getElementById('seatGrid').scrollIntoView({ behavior: 'smooth' });
+                return;
+            }
+
+            const name = document.getElementById('fullName').value;
+            const school = document.getElementById('schoolInput').value;
+            const appleId = document.getElementById('appleId').value;
+
+            document.getElementById('modalName').textContent = name;
+            document.getElementById('modalSchool').textContent = school;
+            document.getElementById('modalAppleId').textContent = appleId;
+            document.getElementById('modalSeat').textContent = selectedSeatId;
+
+            takenSeatIds.add(selectedSeatId);
+            seatsRemaining = Math.max(0, seatsRemaining - 1);
+
+            const modal = document.getElementById('confirmationModal');
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('confirmationModal');
+            modal.classList.add('hidden');
+            selectedSeatId = null;
+            document.getElementById('formSeatLabel').textContent = "No Seat Selected Yet";
+            document.getElementById('selectedSeatNotice').classList.add('hidden');
+            document.getElementById('signupForm').reset();
+            renderSeatGrid();
+        }
+    </script>
+</body>
+</html>
